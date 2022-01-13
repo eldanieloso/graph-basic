@@ -1,0 +1,18 @@
+type CIWMember {
+    name: String!,
+    tag: String!
+}
+
+input CIWMemberInput {
+    name: String!,
+    tag: String!
+}
+
+type Query {
+    getCIWMembers: [CIWMember]
+    getCIWMember(name: String!, tag: String!): CIWMember
+}
+
+type Mutation {
+    createCIWMember(member: CIWMemberInput!): CIWMember
+}
